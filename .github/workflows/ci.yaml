@@ -49,6 +49,10 @@ jobs:
         id: apply
         run: terraform apply -auto-approve
 
+      -
+        name: Get Nodes
+        run: kubectl get nodes
+
       - name: Debug
         run: echo "Building as ${{ vars.DOCKERHUB_USERNAME }}"
 
